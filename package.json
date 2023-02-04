@@ -1,0 +1,30 @@
+{
+  "name": "boilerplate-typescript-sequelize",
+  "version": "1.0.0",
+  "description": "Modelo pessoal para desenvolver aplicações backend utilizando Sequelize e TypeScript",
+  "main": "dist/app.js",
+  "scripts": {
+    "prestart": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "start": "npm run build && nodemon .",
+    "build": "npx -y tsc"
+  },
+  "keywords": [ "backend", "nodejs", "sequelize", "typescript" ],
+  "author": "Guilherme Machado<machadofguilherme@proton.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/express": "^4.17.17",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "^18.11.18",
+    "@types/sequelize": "^4.28.14",
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.6.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^3.1.0",
+    "sequelize": "^6.28.0"
+  }
+}
